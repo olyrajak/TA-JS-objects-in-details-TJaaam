@@ -61,7 +61,7 @@ personTwo.sayHello();
 // Cannot read properties of undefined (reading 'sayHello')
 // 
 // 8. Convert the `createUser` function into `User` class.
-class createUser {
+class CreateUser {
     constructor(name, age) {
         this.name = name;
         this.age = age;
