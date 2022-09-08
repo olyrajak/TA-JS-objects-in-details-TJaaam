@@ -115,7 +115,7 @@ let secondQuestionWithPseudoclassicalPattern = new Question(
 // Create using class
 // ==========================================================================================================
 
-class question {
+class Question {
     constructor(title, options, correctAnswerIndex) {
         this.title = title;
         this.options = options;
