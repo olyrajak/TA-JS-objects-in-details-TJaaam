@@ -12,7 +12,7 @@ function user(name, id, noOfProjects) {
 
     };
     Obj.changeName = function(NewName) {
-        this.NewName = NewName;
+        this.name = NewName;
         return this.name;
 
     };
