@@ -30,20 +30,49 @@ Getter
 #### Test
 
 ```js
-let myStack = new Stack();
-myStack.push('One');
-myStack.push('Two');
-console.log(myStack.length); // 2
-console.log(myStack.peek()); // "Two"
-console.log(myStack.peek(0)); // "One"
-console.log(myStack.reverse()); // ['Two', 'One']
-console.log(myStack.displayStack()); // 'Two One'
-myStack.pop();
-console.log(myStack.length); // 1
-console.log(myStack.peek()); // 'Two'
-console.log(myStack.isEmpty()); // false
-myStack.pop();
-console.log(myStack.isEmpty()); // true
+class stack {
+  constructor() {
+    this.array = []
+  }
+  push(value) {
+    return this.array.push(value)
+  }
+  pop() {
+    return this.array.pop()
+  }
+  peek(index = this.array.length - 1) {
+    return this.array[index]
+  }
+  reverse() {
+    return this.array.reverse()
+  }
+  isEmpty() {
+    return this.array.length == 0
+  }
+  displayStack() {
+    return this.arr.join('')
+  }
+  get length() {
+    return this.arr.length
+  }
+}
+```
+
+```js
+let myStack = new Stack()
+myStack.push('One')
+myStack.push('Two')
+console.log(myStack.length) // 2
+console.log(myStack.peek()) // "Two"
+console.log(myStack.peek(0)) // "One"
+console.log(myStack.reverse()) // ['Two', 'One']
+console.log(myStack.displayStack()) // 'Two One'
+myStack.pop()
+console.log(myStack.length) // 1
+console.log(myStack.peek()) // 'Two'
+console.log(myStack.isEmpty()) // false
+myStack.pop()
+console.log(myStack.isEmpty()) // true
 ```
 
 2. Create a class name `Queue` with the following data and methods. Also implement a `length` getter method.
@@ -67,19 +96,47 @@ Getter
 #### Test
 
 ```js
-let atmQueue = new Queue();
-atmQueue.enqueue('Aman');
-atmQueue.enqueue('John');
-atmQueue.enqueue('Rohan');
-console.log(atmQueue.displayQueue()); // "Aman John Rohan"
-console.log(atmQueue.length); // 3
-console.log(atmQueue.peek()); // "Aman"
-console.log(atmQueue.peek(1)); // "John"
-atmQueue.dequeue();
-console.log(atmQueue.length); // 2
-console.log(atmQueue.peek()); // 'John'
-console.log(atmQueue.isEmpty()); // false
-atmQueue.dequeue();
-atmQueue.dequeue();
-console.log(atmQueue.isEmpty()); // true
+class queue {
+  constructor() {
+    this.queue = array[]
+  }
+  enqueue(value){
+    return this.queue.push(value);
+  }
+  dequeue(value){
+    return this.queue.splice(0,1);
+  }
+  peek(index=0){
+    return this.queue[index];
+  }
+
+  isEmpty(){
+    return !(this.queue.length()> 0);
+  }
+
+  displayQueue(){
+    return this.queue.join(" ");
+  }
+   get length() {
+    return this.queue.length
+  }
+}
+```
+
+```js
+let atmQueue = new Queue()
+atmQueue.enqueue('Aman')
+atmQueue.enqueue('John')
+atmQueue.enqueue('Rohan')
+console.log(atmQueue.displayQueue()) // "Aman John Rohan"
+console.log(atmQueue.length) // 3
+console.log(atmQueue.peek()) // "Aman"
+console.log(atmQueue.peek(1)) // "John"
+atmQueue.dequeue()
+console.log(atmQueue.length) // 2
+console.log(atmQueue.peek()) // 'John'
+console.log(atmQueue.isEmpty()) // false
+atmQueue.dequeue()
+atmQueue.dequeue()
+console.log(atmQueue.isEmpty()) // true
 ```
